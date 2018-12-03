@@ -13,7 +13,7 @@ const CLIENT_SECRET = "ODFB344IIV311HQBFHLNYZSHIVBAEGNU5K2YGQ3LLBJYQNLM";
 
 const foursquare = require("react-foursquare")({
   clientID: CLIENT_ID,
-  clientSecret: CLIENT_SECRET
+  clientSecret: CLIENT_SECRET // is this safe to expose into the browser?
 });
 
 class App extends Component {
