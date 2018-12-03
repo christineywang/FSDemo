@@ -1,4 +1,5 @@
 import React from "react";
+import FoursquareLogo from '../style/powered-by-foursquare-grey.png';
 
 class Attribution extends React.Component {
   render() {
@@ -6,7 +7,7 @@ class Attribution extends React.Component {
       <div className="col-md-6">
         <img
           className="attribution"
-          src="/style/powered-by-foursquare-grey.png"
+          src={FoursquareLogo}
         />
       </div>
     );
