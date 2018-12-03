@@ -21,5 +21,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "mapbox-gl": "^0.52.0-beta.1",
+    "react-foursquare": "^1.0.3",
+    "react-mapbox-gl": "^4.0.2"
+  }
 }
