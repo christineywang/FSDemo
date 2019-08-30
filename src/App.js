@@ -43,7 +43,8 @@ class App extends Component {
           selectedVenue: null,
           venues: venues
         })
-      );
+      ).catch(err => console.log(err));
+      
   }
 
   render() {
