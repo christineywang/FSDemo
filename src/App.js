@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import SearchBar from "./components/search_bar";
 import VenueList from "./components/venue_list";
 import VenueDetail from "./components/venue_detail";
@@ -8,8 +7,9 @@ import Attribution from "./components/attribution";
 
 import './App.css';
 
-const CLIENT_ID = "TSQSZARZBQHF00L4C2ILSDCZETKWHT41ZXOKRJNJ3TN0N0BT";
-const CLIENT_SECRET = "ODFB344IIV311HQBFHLNYZSHIVBAEGNU5K2YGQ3LLBJYQNLM";
+// https://stackoverflow.com/questions/48699820/how-do-i-hide-api-key-in-create-react-app
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID
+const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET
 
 const foursquare = require("react-foursquare")({
   clientID: CLIENT_ID,
@@ -43,7 +43,8 @@ class App extends Component {
           selectedVenue: null,
           venues: venues
         })
-      );
+      ).catch(err => console.log(err));
+      
   }
 
   render() {

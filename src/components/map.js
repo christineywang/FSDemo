@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import ReactMapboxGl, { Layer, Feature, Popup } from "react-mapbox-gl";
 import Attribution from "./attribution";
 
+const accessToken = process.env.REACT_APP_MAP_ACCESS_TOKEN
+
 const Mapbox = ReactMapboxGl({
-  accessToken:
-    "pk.eyJ1IjoiY3dhbmcyNDIyIiwiYSI6ImNqa3d4Z2F2cjAycG4zdXBnZTZid2J2bmMifQ.BFrd_zsyMxGq6zTyiPMH2A"
+  accessToken
 });
 
 // Create a feature and popup component for each venue
